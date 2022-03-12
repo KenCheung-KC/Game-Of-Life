@@ -8,11 +8,11 @@ const Wrapper = styled.div`
 `
 
 const Button = (props) => {
-    const {onClickAction} = props
+    const {onClickAction, buttonText} = props
 
     return (
         <Wrapper>
-            <button onClick={onClickAction}>Start</button>
+            <button onClick={onClickAction}>{buttonText}</button>
         </Wrapper>
     )
 }
