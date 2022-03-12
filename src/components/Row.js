@@ -11,24 +11,13 @@ const Wrapper = styled.div`
     display: flex;
 `
 
-// const Cell = styled.div`
-//     background: ${props => props.alive ? 'blue' : 'black'};
-//     height: 20px;
-//     width: 20px;
-//     margin: 1px;
-// `
-
 const Row = (props) => {
     const { updateCellStatus, cellInRow, rowNumber } = props
-    // console.log('row props: ', props)
-    console.log('cellInRow: ', cellInRow)
-    // return (
-    //     <div></div>
-    // )
+
     return (
         <Wrapper>
             {cellInRow.map((cellInCol, index) => {
-                return <Cell key={`row${rowNumber}col${index}`} cell={cellInCol} rowNumber={rowNumber} colNumber={index} updateCellStatus={updateCellStatus} />
+                return <Cell key={10*rowNumber+index} cell={cellInCol} rowNumber={rowNumber} colNumber={index} updateCellStatus={updateCellStatus} />
             })}
         </Wrapper>
     )
